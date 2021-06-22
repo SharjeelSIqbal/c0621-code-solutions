@@ -16,37 +16,33 @@
   6. Create a form for submit
   -->
   <h1>Coding Form!</h1>
-  <form action="" method="get" name="email" id="email">
-   <label>Email<br /></label>
-    <input for="email" type="text" name="email">
-  </form>
-  <form action="" method="get" name="cool" id="cool">
-    <label for="cool">Why is coding cool?<br /></label>
-    <select name="cool">
+  <form action="" method="get" name="coding" id="coding-form">
+    <label for="email">Email<br /></label>
+    <input type="text" name="email-text" id="email">
+
+    <label for="cool"><br />Why is coding cool?<br /></label>
+    <select id="cool">
       <option value="interesting">Because it's interesting</option>
       <option value="fun">Because it's fun</option>
       <option value="powerful">Because it's powerful</option>
     </select>
-  </form>
-  <form action="" method="get" name="language" id="language">
-    <label for="language">Favorite Language(choose one)<br /></label>
-    <input type="radio" name="language" value="HTML">
-    <label for="html">HTML</label>
-    <input type="radio" name="css" value="css">
-    <label for="css">CSS</label>
-    <input type="radio" name="javascript" value="javascript">
-    <label for="javascript">JavaScript</label>
-  </form>
-  <form action="" method="get" name="sign-up" id="sign-up">
-    <label for="sign-up">Would you like to sign for more information?<br /></label>
-    <input type="checkbox" name="sign" value="sign">
-    <label for="sign">Sign me up!</label>
-  </form>
-  <form action="" method="post" name="comments" id="comments">
-    <label for="comments">Comments <br /></label>
+
+    <p>Favorite Language(choose one)</p>
+    <input type="radio" name="coding-language" value="html" id="coding-html">
+    <label for="coding-html">HTML</label>
+    <input type="radio" name="coding-language" value="css" id="coding-css">
+    <label for="coding-css">CSS</label>
+    <input type="radio" name="coding-language" value="javascript" id="coding-javascript">
+    <label for="coding-javascript">JavaScript</label>
+
+
+    <label for="sign-up"><br />Would you like to sign for more information?<br /></label>
+    <input type="checkbox" name="signing" value="sign" id="sign-up">
+    <label for="sign-up">Sign me up!</label>
+
+    <label for="comment-box"><br />Comments <br /></label>
     <textarea name="comments" id="comment-box" cols="30" rows="10"></textarea>
-  </form>
-  <form action="" name="submit" id="submit">
+    <br />
     <input type="submit" name="submit-button" id="submit-button">
   </form>
 </body>

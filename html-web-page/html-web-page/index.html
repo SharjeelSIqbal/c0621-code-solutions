@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Web Page</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td:not(:first-child) {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- your HTML code here 👇 -->
+  <h1>Jelly of the Month Club</h1>
+  <div>
+    <h2>Make all your friends jellly of your stock of jelly!</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+      aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div>
+      <img src="https://media.giphy.com/media/nx8GZtGrDYQBa/source.gif" alt="It's peanutbutter jellytime">
+    </div>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Basic Plan</th>
+          <th scope="col">Deluxe Plan</th>
+          <th scope="col">Jelly Giant Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Three new curated jellies per month</td>
+          <td>&check;</td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Monthly jellies come with commermoriatve mason jars</td>
+          <td></td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Free bonus jar of perserves bi-monthly</td>
+          <td></td>
+          <td>&check;</td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Free yearly tickets to Jelly Con</td>
+          <td></td>
+          <td></td>
+          <td>&check;</td>
+        </tr>
+        <tr>
+          <td>Montly Pricing</td>
+          <td>$30</td>
+          <td>$50</td>
+          <td>$60</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <form>
+      <label for="surprise">Like what you see? Become a part of the JOTMC family today!</label>
+      <div>
+        <input type="text" name="club" id="name">
+        <select name="club" id="plan">
+          <option value="basic">$30</option>
+          <option value="deluxe">$50</option>
+          <option value="jelly-giant">$60</option>
+        </select>
+      <!--
+        WORKING CODE PLEASE CLICK SUBMIT
+        <input type="submit">
+      -->
+        <button type="submit" id="surprise"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Submit</a></button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

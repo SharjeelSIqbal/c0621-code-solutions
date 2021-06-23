@@ -1,0 +1,27 @@
+h1{
+  text-align: center;
+  font-family: "Abril FatFace", sans-serif;
+  font-size: 100px;
+  margin: 10px;
+  padding: 25px;
+  border: 10px double silver;
+  background-color: lightblue;
+  color: whitesmoke;
+}
+h2{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: lightcoral;
+}
+p{
+  background-color: seagreen;
+  color: white;
+  text-align: center;
+  border: slateblue solid 10px;
+  margin: 25px;
+  padding: 5px 10px;
+  font-family: "Indie Flower", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}

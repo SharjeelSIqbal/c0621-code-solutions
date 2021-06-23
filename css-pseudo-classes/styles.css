@@ -1,14 +1,17 @@
-/* This blacks out the whole things figure out how to avoid that
+
 tr:nth-child(odd) {
   background-color: lightgray;
 }
-*/
-.odd {
+
+/* Use CSS only
+Remove class attributes and go from there
+experiment with code and test methods
+ .odd {
   background-color: lightgray;
   color: black;
 }
-
-.thead {
+*/
+th {
   background-color: black;
   color: white;
 }

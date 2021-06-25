@@ -5,11 +5,11 @@
   background-size: cover;
 
   /* your code here */
+  position: relative;
 }
 
 .meme > img {
   width: 100%;
-  position: relative;
 }
 
 .emoji {
@@ -18,7 +18,7 @@
   /* your code here */
   position: absolute;
   top: 20px;
-  left: 250px;
+  right: 20px;
 }
 
 .joke {
@@ -32,18 +32,17 @@
 
   /* your code here */
   position: absolute;
-  width: 300px;
-  top: 175px;
+  bottom: 10px;
   left: 10px;
 }
 
 .overlay {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 7.5px;
-  left: 7.5px
 
   /* your code here */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

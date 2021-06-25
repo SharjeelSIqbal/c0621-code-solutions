@@ -13,24 +13,25 @@
 
 #bulbasaur {
   /* your code here */
+  top: 2rem;
 }
 
 #charmander {
   /* your code here */
-  top: 50px;
+  top: 4rem;
 }
 
 #squirtle {
   /* your code here */
-  top: 100px;
+  top: 8rem;
 }
 
 #pikachu {
   /* your code here */
-  top: 200px;
+  top: 16rem;
 }
 
 #jigglypuff {
   /* your code here */
-  top: 400px;
+  top: 32rem;
 }

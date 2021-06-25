@@ -25,11 +25,7 @@ body {
 }
 
 .col-two-third {
-  width: (200% / 3);
-}
-
-.full-width {
-  width: 100%;
+  width: calc(200% / 3);
 }
 
 .character {

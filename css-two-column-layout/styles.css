@@ -1,0 +1,86 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.header {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+p {
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 13px;
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-size: 2.8rem;
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+h1,
+h3,
+p {
+  font-family: "Karla", sans-serif;
+}
+
+p > .header {
+  font-size: 14px;
+}
+
+.icon {
+  align-self: flex-start;
+  width: 115px;
+  height: 115px;
+  padding-right: 10px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content > div {
+  margin-top: 1rem;
+  width: 47%;
+}
+
+.spacing {
+  margin-top: 1.8rem;
+}
+
+.row {
+  padding: 0 1.8rem;
+  display: flex;
+}
+
+button {
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  display: block;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #d14c45;
+  background-color: white;
+  border: 2px #d14c45 solid;
+  height: 2rem;
+  width: 10rem;
+  text-align: center;
+}

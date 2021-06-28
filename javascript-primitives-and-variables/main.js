@@ -1,0 +1,11 @@
+var fullName = 'Sharjeel Iqbal';
+var isCool = true;
+var totalPets = 1;
+var unknown = null;
+var never;
+console.log('My full name is ' + fullName + ', I am super cool ' + isCool + ', and I have ' + totalPets + ' cat!');
+console.log(typeof fullName);
+console.log(typeof isCool);
+console.log(typeof totalPets);
+console.log(unknown);
+console.log(never);

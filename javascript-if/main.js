@@ -35,7 +35,7 @@ function isOldEnoughToDrink(person) {
   if (person.age < 21) {
     return false;
   } else if (person.name.valueOf() === 'Dwight Shrute') {
-    return 'Bears, beats, Battlestar Galatica' + false;
+    return 'Bears, beats, Battlestar Galatica ' + false;
   } else {
     return true;
   }
@@ -50,11 +50,7 @@ function isOldEnoughToDrive(person) {
 }
 
 function isOldEnoughToDrinkAndDrive(person) {
-  if (person.age >= 21) {
-    return 'No one should be drinking and driving, it\'s illegal' + true;
-  } else {
-    return false;
-  }
+  return false;
 }
 
 function categorizeAcidity(pH) {

@@ -19,7 +19,7 @@ function getNumbersToTen() {
 function getEvenNumbersToTwenty() {
   var evenNumbers = [];
   var currentNumber = 2;
-  while (currentNumber % 2 !== 1 && currentNumber <= 20) {
+  while (currentNumber <= 20) {
     evenNumbers.push(currentNumber);
     currentNumber += 2;
   }
@@ -47,7 +47,7 @@ function logEachCharacter(string) {
 function doubleAll(numbers) {
   var doubled = [];
   for (var i = 0; i < numbers.length; i++) {
-    doubled[i] = numbers[i] * 2;
+    doubled.push(numbers[i] * 2);
   }
   return doubled;
 }

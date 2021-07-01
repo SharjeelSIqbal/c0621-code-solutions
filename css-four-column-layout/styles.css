@@ -1,0 +1,72 @@
+* {
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  margin: 0 0;
+  background-color: rgb(247, 248, 250);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.display-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-column {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.perfectly-balanced {
+  justify-content: center;
+  align-items: center;
+}
+
+.header-size {
+  font-size: 18px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-place {
+  justify-self: space-evenly;
+}
+
+.flex-basis-25 {
+  flex-basis: 25%;
+}
+
+.images {
+  width: 250px;
+  height: 250px;
+}
+
+.font {
+  font-family: "Barlow", sans-serif;
+}
+
+.header-bold {
+  font-weight: 500;
+}
+
+.context {
+  color: darkgray;
+}

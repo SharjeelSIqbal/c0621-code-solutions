@@ -1,7 +1,6 @@
 /* exported capitalize */
 function capitalize(word) {
   var storage = '';
-  word.toUpperCase();
   for (var i = 0; i < word.length; i++) {
 
     if (i === 0) {

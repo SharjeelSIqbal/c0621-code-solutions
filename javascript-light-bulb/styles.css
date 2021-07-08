@@ -1,0 +1,51 @@
+body {
+  margin: 0 auto;
+}
+
+.dark {
+  background-color: #111;
+}
+
+.light {
+  background-color: #fef9f1;
+}
+
+.margin {
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-shadow {
+  flex-basis: 500px;
+  height: 525px;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+
+.light-bulb {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.shadow-black {
+  background-color: #0c0c0c;
+}
+
+.shadow-light {
+  background-color: #fef7db;
+}
+
+.light-bulb-black {
+  background-color: #252525;
+}
+
+.light-bulb-light {
+  background-color: #f9ea84;
+}

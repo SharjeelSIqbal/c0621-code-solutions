@@ -85,6 +85,3 @@ function renderPokemon(pokemon) {
 for (var i = 0; i < pokedex.length; i++) {
   renderPokemon(pokedex[i]);
 }
-/*
-
- */

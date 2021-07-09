@@ -73,7 +73,6 @@ function renderPokemon(pokemon) {
   pokeNum.textContent = pokemon.number;
   pokeP.textContent = pokemon.description;
 
-  document.querySelector('.row').appendChild(columnThird);
   columnThird.appendChild(pokeCard);
   pokeCard.appendChild(pokemonPicture);
   pokeCard.appendChild(pokeTextDiv);
@@ -81,7 +80,10 @@ function renderPokemon(pokemon) {
   pokeTextDiv.appendChild(pokeNum);
   pokeTextDiv.appendChild(pokeP);
 
+  return columnThird;
 }
 for (var i = 0; i < pokedex.length; i++) {
-  renderPokemon(pokedex[i]);
+  var row = document.querySelector('.row');
+  row.appendChild(renderPokemon(pokedex[i]));
+
 }

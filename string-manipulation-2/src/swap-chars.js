@@ -1,15 +1,15 @@
 /* exported swapChars */
 function swapChars(firstIndex, secondIndex, string) {
-  var wordArr = [];
+  var StringArr = [];
   var word = '';
 
   for (var i = 0; i < string.length; i++) {
-    wordArr.push(string[i]);
+    StringArr.push(string[i]);
   }
-  wordArr.splice(firstIndex, 1, string[secondIndex]);
-  wordArr.splice(secondIndex, 1, string[firstIndex]);
-  for (i = 0; i < wordArr.length; i++) {
-    word += wordArr[i];
+  StringArr.splice(firstIndex, 1, string[secondIndex]);
+  StringArr.splice(secondIndex, 1, string[firstIndex]);
+  for (i = 0; i < StringArr.length; i++) {
+    word += StringArr[i];
   }
 
   return word;

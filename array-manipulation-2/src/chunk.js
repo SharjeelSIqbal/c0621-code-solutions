@@ -2,10 +2,13 @@
 function chunk(array, size) {
   var newArray = [];
   var chunkArray = [];
-  for (var i = size; i < array.length; i++) {
-    for (i = 0; i < size; i++) {
-      newArray.push(array[i]);
-    } chunkArray.push(newArray);
+
+  for (var i = 0; i < array.length; i++) {
+    newArray.push(array[i]);
+    if (newArray.length === size || i === array.length - 1) {
+      chunkArray.push(newArray);
+      newArray = [];
+    }
   }
   return chunkArray;
 }

@@ -1,0 +1,52 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.border {
+  border-left: 1px solid #d6d6d6;
+  border-spacing: 1rem;
+  padding-right: 3px;
+  margin-left: 5px;
+}
+
+.size {
+  color: #d6d6d6;
+}
+
+.text-container {
+  margin-bottom: 1rem;
+}
+
+.price {
+  background-color: #fff1e7;
+}
+
+.smaller-h5-margin {
+  margin: 10px 0 15px;
+}

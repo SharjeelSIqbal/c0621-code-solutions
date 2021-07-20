@@ -1,0 +1,24 @@
+body {
+  font-size: 28px;
+  font-family: "Special Elite", sans-serif;
+}
+
+.correct {
+  color: #19cd1b;
+}
+
+.incorrect {
+  color: #f80605;
+}
+
+.word {
+  padding-bottom: 5px;
+  border-bottom: 5px black solid;
+}
+
+.center {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

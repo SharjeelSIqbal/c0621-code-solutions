@@ -25,6 +25,7 @@ Bank.prototype.getAccount = function (number) {
       return arrObj;
     }
   } return null;
+
 };
 
 Bank.prototype.getTotalAssets = function () {

@@ -4,9 +4,7 @@ function omit(source, keys) {
   var keyArr = Object.getOwnPropertyNames(source);
   for (var i = 0; i < keyArr.length; i++) {
     if (!keys.includes(keyArr[i])) {
-      if (keyArr[i]) {
-        newObj[keyArr[i]] = source[keyArr[i]];
-      }
+      newObj[keyArr[i]] = source[keyArr[i]];
     }
   }
   return newObj;

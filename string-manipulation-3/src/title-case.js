@@ -8,7 +8,11 @@ function titleCase(string) {
       string[i] = string[i].toUpperCase();
     }
     if (string[i].toLowerCase().includes('javascript')) {
-      string[i] = string[i][0].toUpperCase() + string[i].substring(1, 4) + string[i][4].toUpperCase() + string[i].substring(5);
+      if (string[i].includes(':')) {
+        string[i] = 'JavaScript:';
+      } else {
+        string[i] = 'JavaScript';
+      }
     }
     if (!shortWords.includes(string[i]) || string[i] === string[0]) {
       string[i] = string[i][0].toUpperCase() + string[i].substring(1);

@@ -3,7 +3,6 @@ var rankCards = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Q
 var cardValue = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
 var suitTypes = ['Spades', 'Clovers', 'Diamond', 'Heart'];
 var deck = [];
-var numberOfCards = 52;
 var matthew = new Player('Matthew');
 var bob = new Player('Bob the Builder');
 var ernie = new Player('Ernie');
@@ -21,29 +20,29 @@ function Card(rank, suit, value) {
 }
 function shuffle() {
   deck = [];
-  numberOfCards = 52;
   for (var i = 0; i < suitTypes.length; i++) {
     for (var j = 0; j < rankCards.length; j++) {
       var card = new Card(rankCards[j], suitTypes[i], cardValue[j]);
       deck.push(card);
     }
   }
+  deck = _.shuffle(deck);
   return deck;
 }
 function deal(player) {
+
   for (var i = 0; i < player.length; i++) {
     var hand = [];
     for (var j = 0; j < 2; j++) {
-      var index = Math.floor(Math.random() * numberOfCards);
-      hand.push(deck[index]);
-      deck.splice(index, 1);
-      numberOfCards--;
+      hand.push(deck[deck.length - 1]);
+      deck.pop();
     }
     player[i].hand = hand;
     player[i].pointTotal = hand[0].value + hand[1].value;
   }
   return hand;
 }
+
 function play() {
   var highScore = 0;
   var tie = [];
@@ -69,6 +68,7 @@ function play() {
     play();
   } else {
     players = [matthew, bob, ernie, bert];
+    console.log(winning);
     return winning;
   }
 }

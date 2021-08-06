@@ -1,23 +1,75 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
-// var cards = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
-// var valueTypes = ['Spades', 'Clovers', 'Diamond', 'Heart'];
-
-// function Player(name) {
-//   this.name = name;
-//   var cardsGiven = [];
-//   var score = 0;
-//   var winner = false;
-// }
-
-// function playGame(name1, name2, name3, name4) {
-//   var player1 = new Player(name1);
-//   var player2 = new Player(name2);
-//   var player3 = new Player(name3);
-//   var player4 = new Player(name4);
-
-// }
-
-// function randomizeCards() {
-//   var eightRandom = [];
-
-// }
+var rankCards = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+var cardValue = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
+var suitTypes = ['Spades', 'Clovers', 'Diamond', 'Heart'];
+var deck = [];
+var numberOfCards = 52;
+var matthew = new Player('Matthew');
+var bob = new Player('Bob the Builder');
+var ernie = new Player('Ernie');
+var bert = new Player('Bert');
+var players = [matthew, bob, ernie, bert];
+function Player(name) {
+  this.name = name;
+  this.hand = [];
+  this.pointTotal = 0;
+}
+function Card(rank, suit, value) {
+  this.rank = rank;
+  this.suit = suit;
+  this.value = value;
+}
+function shuffle() {
+  deck = [];
+  numberOfCards = 52;
+  for (var i = 0; i < suitTypes.length; i++) {
+    for (var j = 0; j < rankCards.length; j++) {
+      var card = new Card(rankCards[j], suitTypes[i], cardValue[j]);
+      deck.push(card);
+    }
+  }
+  return deck;
+}
+function deal(player) {
+  for (var i = 0; i < player.length; i++) {
+    var hand = [];
+    for (var j = 0; j < 2; j++) {
+      var index = Math.floor(Math.random() * numberOfCards);
+      hand.push(deck[index]);
+      deck.splice(index, 1);
+      numberOfCards--;
+    }
+    player[i].hand = hand;
+    player[i].pointTotal = hand[0].value + hand[1].value;
+  }
+  return hand;
+}
+function play() {
+  var highScore = 0;
+  var tie = [];
+  var winning;
+  shuffle();
+  deal(players);
+  for (var i = 0; i < players.length; i++) {
+    if (players[i].pointTotal > highScore) {
+      highScore = players[i].pointTotal;
+      winning = players[i];
+    }
+  }
+  for (i = 0; i < players.length; i++) {
+    if (players[i].pointTotal === highScore) {
+      tie.push(players[i]);
+    }
+  }
+  if (tie.length >= 2) {
+    players = [];
+    for (i = 0; i < tie.length; i++) {
+      players.push(tie[i]);
+    }
+    play();
+  } else {
+    players = [matthew, bob, ernie, bert];
+    return winning;
+  }
+}
+play();

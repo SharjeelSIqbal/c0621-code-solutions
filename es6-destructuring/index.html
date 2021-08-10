@@ -25,12 +25,10 @@
   const arr3 = new Books('Mockingjay: The Final Book of The Hunger Games', 'Suzanne Collins', 3245);
   const arr4 = new Books('Dead Dead Demon\'s De De De Destruction', 'Inio Asano', 1233);
   const library = [arr1, arr2, arr3, arr4];
-  console.log(library[3]);
   const { title: book3Title, author: author3Title, libraryID: library3, book3 = { title: book3Title, author: author3Title, library: library3 } } = library[0];
   const { title: book4Title, author: author4Title, libraryID: library4, book4 = { title: book4Title, author: author4Title, library: library4 } } = library[1];
   const { title: book5Title, author: author5Title, libraryID: library5, book5 = { title: book5Title, author: author5Title, library: library5 } } = library[2];
   const { title: book6Title, author: author6Title, libraryID: library6, book6 = { title: book6Title, author: author6Title, library: library6 } } = library[3];
-  console.log(arr1);
   console.log('book 3:', book3);
   console.log('book 4:', book4);
   console.log('book 5:', book5);

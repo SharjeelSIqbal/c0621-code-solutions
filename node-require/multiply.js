@@ -1,2 +1,2 @@
 const multiply = (x, y) => x * y;
-module.exports.multiply = multiply;
+module.exports = multiply;

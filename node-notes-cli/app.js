@@ -42,7 +42,3 @@ if (commands[0] === 'delete') {
 if (commands[0] === 'update') {
   updateNote();
 }
-fs.readFile('./data.json', 'utf8', (err, data) => {
-  if (err) throw err;
-
-});

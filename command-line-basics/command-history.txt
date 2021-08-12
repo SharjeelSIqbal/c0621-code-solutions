@@ -1,0 +1,500 @@
+   69  git add css-layout-classes
+   70  git commit -m "removed classfull-width and changed class two third to specification"
+   71  gitp push origin css-layout-classes
+   72  git push origin css-layout-classes
+   73  git checkout master
+   74  git statys
+   75  git checkout css-brochure-form
+   76  git add css-brochure-form
+   77  git commit -m "removed comment of margin from code"
+   78  push origin css-brochure-form
+   79  git push origin css-brochure-form
+   80  git checkout master
+   81  git checkout -b css-positioning
+   82  git add css-positioning
+   83  git commit -m "Completed CSS Positioning"
+   84  git push origin css-positioning
+   85  git checkout master
+   86  git checkout css-three-column-layout
+   87  git checkout master
+   88  git checkout css-positioning
+   89  git add css-positioning
+   90  git commit -m "removed large pixel counts from both absolute and relative css files" 
+   91  git push origin css-positioning
+   92  git checkout master
+   93  git pull origin master
+   94  git checkout css--three-column-layout
+   95  git checkout css-three-column-layout
+   96  git checkout css-three-column-layout
+   97  git pull origin master
+   98  git checkout css-three-column-layout
+   99  git checkout css-three-column-layout
+  100  git add css-three-column-layout
+  101  git commit -m "Completed Three Column Layout Challenge"
+  102  git push origin css-three-column-layout
+  103  git checkout master
+  104  cd repos/c0621-code-solutions/
+  105  git checkout -b css-four-column-layout
+  106  git add css-four-column-layout
+  107  git commit -m "Completed CSS Four Column Layout"
+  108  git push origin css-four-column-layout
+  109  git checkout master
+  110  git status
+  111  cd repos/
+  112  cd c0621-code-solutions/
+  113  git checkout master
+  114  git status
+  115  git checkout -b object-manipulation-1
+  116  git checkout master
+  117  git status
+  118  git pull origin master 
+  119  git status
+  120  cd rep
+  121  cd repos
+  122  cd c0621-code-solutions/
+  123  git status
+  124  git checkout -b javascript-light-bulb
+  125  git status
+  126  git status
+  127  git add javascript-light-bulb
+  128  git commit -m "Completed JavaScript Light Bulb"
+  129  git push origin javascript-light-bulb
+  130  git checkout master
+  131  git status
+  132  git branches
+  133  git branch
+  134  cd repos/c0621-code-solutions/
+  135  git status
+  136  git checkout javascript-modal
+  137  git checkout -b javascript-modal
+  138  git add javascript-modal
+  139  git commit -m "Completed JavaScript Modal"
+  140  git push origin javascript-modal
+  141  git checkout master
+  142  git status
+  143  git checkout -b css-transitions
+  144  git status
+  145  git add css-transitions
+  146  git commit -m "Completed CSS Transitions"
+  147  git push origin css-transitions
+  148  git checkout master
+  149  git checkout -b javascript-forms
+  150  git add javascript-forms
+  151  git commit -m "Completed Javascript Forms"
+  152  git push origin javascript-forms
+  153  git chcekout master
+  154  git checkout master
+  155  git status
+  156  git pull origin master
+  157  git checkout string-manipulation-1
+  158  git status
+  159  git checkout master 
+  160  git status
+  161  git checkout -b dom-creation
+  162  git checkout master
+  163  git checkout array-manipulation
+  164  git branch
+  165  cd repos/c0621-code-solutions/
+  166  git clean -df string-manipulation-1
+  167  git checkout string-manipulation-1
+  168  git add string-manipulation-1
+  169  git commit -m "Deleted useless method" 
+  170  git push origin string-manipulation-1
+  171  git checkout status
+  172  git status
+  173  git checkout object-manipulation-1
+  174  git add object-manipulation-1
+  175  git commit "Still need to find values within the properties of Objects"
+  176  git commit -m "Still need to find the values of properties wihtin objects" 
+  177  git restore objects-manipulations-1
+  178  git status
+  179  git checkout master
+  180  git checkout master
+  181  git status
+  182  checkout object-manipulation-1/
+  183  git checkout object-manipulation-1/
+  184  git checkout object-manipulation-1
+  185  git restore --staged object-manipulation-1
+  186  git status
+  187  git checkout master
+  188  git status
+  189  git checkout dom-creation
+  190  git add dom-creation
+  191  git commit -m "Completed Dom Creations"
+  192  git restore --staged dom-creation
+  193  git status
+  194  git add dom-creation
+  195  git commit -m "Completed Dom Creaton"
+  196  git push origin dom-creation
+  197  git checkout master
+  198  git status
+  199  git checkout dom-creation
+  200  git status
+  201  git add dom-creation
+  202  git commit -m "removed comment brackets"
+  203  git push origin dom-creation
+  204  git status
+  205  git add dom-creation
+  206  git commit -m "added return statement, made dom creator more useful, and added row to for loop."
+  207  git push origin dom-creation
+  208  git checkout master
+  209  git status
+  210  git checkout -b css-media-queries
+  211  git status
+  212  git add css-media-queries
+  213  git commit -m "Completed CSS Media Queries"
+  214  git push origin css-media-queries
+  215  git status
+  216  git checkout master
+  217  git checkout array-manipulation-1
+  218  git branches
+  219  git branch
+  220  cd repos/code-journal/
+  221  git status
+  222  git pull origin issue-#2-view-an-entry
+  223  git checkout master
+  224  git pull origin master
+  225  git checkout -b issue-#3-user-can-edit-an-entry
+  226  cd repo
+  227  cd repos/
+  228  ls
+  229  cd week-planner/
+  230  git pull origin master
+  231  git pull origin master
+  232  git pull origin master
+  233  git status
+  234  git add index.html main.js
+  235  git commit -m "data model complete" 
+  236  git restore --staged main.js index.html
+  237  git status
+  238  git add main.js
+  239  git add index.html
+  240  git commit -m "Completed Data Model"
+  241  git push origin master
+  242  git pull origin master
+  243  git pull origin master
+  244  git status
+  245  git add master
+  246  git add index.html main styles
+  247  git add index.html main.js styles.css
+  248  git status
+  249  git commit -m "Hackathon"
+  250  git status
+  251  git add main.js
+  252  git commit -m "Hackathon" 
+  253  git push origin master
+  254  git cd
+  255  cd
+  256  cd repos/week-planner/
+  257  git@github.com:SharjeelSIqbal/week-planner.git
+  258  git clon git@github.com:SharjeelSIqbal/week-planner.git
+  259  git clone git@github.com:SharjeelSIqbal/week-planner.git
+  260  git status
+  261  git add week-planner/
+  262  git add-weekplanner
+  263  git add week-planner
+  264  git commit -m "Cloning week planner" 
+  265  git push origin master
+  266  git checkout -b issue-data-updates-chart
+  267  git status
+  268  cd
+  269  cd repos/code-journal/
+  270  git status
+  271  git pull origin issue-#3-user-can-edit-an-entry
+  272  git checkout master
+  273  git pull origin master
+  274  git pull origin master
+  275  git ls
+  276  ls
+  277  git branches
+  278  git branch
+  279  git checkout issue-#3-user-can-edit-an-entry
+  280  git status
+  281  git add css js
+  282  git status
+  283  git commit -m "
+  284  -Created a new button element that looks like a pencil
+  285  -When a list item is click on the button appears otherwise it's hidden
+  286  -Button appears only on the item that is clicked on, if button is seen on another element than it becomes hidden and appears on the current list item
+  287  "
+  288  git push origin issue-##3-user-can-edit-an-entry
+  289  git push origin issue-#3-user-can-edit-an-entry
+  290  git status
+  291  git status
+  292  git add css index.html js
+  293  git status
+  294  git commit -m "
+  295  Added an edit feature to the Journal
+  296  -user can now click on a list item and an edit icon will apear
+  297  -user can click icon and open up an entry form with the text content of the list item they chose
+  298  -user can change entries and prepend them to the document. 
+  299  -edited documents do not move in the array and once the page is reloaded 
+  300  edited documents will return to their original positions. "
+  301  git push origin issue-#3-user-can-edit-an-entry
+  302  git status
+  303  git checkout master
+  304  cd
+  305  cd repos/
+  306  ls
+  307  cd c0621-code-solutions/
+  308  git status
+  309  checkout css-canvas-medical
+  310  git checkout css-canvas-medical
+  311  git branch
+  312  cd repos/
+  313  cd c0621-code-solutions/
+  314  git checkout javascript-bank
+  315  git status
+  316  git commit add javascript-bank
+  317  git add javascript-bank
+  318  git commit -m Completed JS Bank"
+  319  Completed JS Bank"
+  320  git commit -m "Completed JS Bank"
+  321  git push origin javascript-bank
+  322  git push origin javascript-bank
+  323  git status
+  324  git add javascript-bank
+  325  git commit -m "Completed JS Bank"
+  326  git push origin javascript-bank
+  327  git checkout master
+  328  git status
+  329  git checkout -b javascript-carousel
+  330  git status
+  331  git add javascript-carousel
+  332  git status
+  333  git commit -m "Fully functional carousel" 
+  334  git push origin javascript-carousel
+  335  git status
+  336  git checkout master
+  337  cd
+  338  cd repos/code-journal/
+  339  git branch
+  340  git checkout issue-#3-user-can-edit-an-entry
+  341  git staus
+  342  git status
+  343  cd
+  344  cd repos/c0621-code-solutions/
+  345  git checkout object-manipulation-2
+  346  cd
+  347  cd repos/c0621-code-solutions/
+  348  cd
+  349  cd repos/co
+  350  cd repos/code-journal/
+  351  git status
+  352  cd repos/c0621-code-solutions/
+  353  git status
+  354  cd
+  355  cd repos/driving-game/
+  356  status
+  357  git@github.com:SharjeelSIqbal/driving-game.git
+  358  git@github.com:SharjeelSIqbal/driving-game.git
+  359  git clone git@github.com:SharjeelSIqbal/driving-game.git
+  360  git status
+  361  cd driving-game/
+  362  npm ci
+  363  git checkout -b issue-#1-user-can-see-their-car
+  364  git status
+  365  cd
+  366  cd repos/c0
+  367  cd repos/c0
+  368  cd repos/c0621-code-solutions/
+  369  git checkout javascript-carousel
+  370  git status
+  371  git add object-manipulation-2
+  372  git commit -m "Forgot to submit these changes before sending you the pseudo code" 
+  373  git push origin object-manipulation-2
+  374  git checkout master
+  375  git checkout javascript-carousel
+  376  cd
+  377  cd repos/driving-game/driving-game/
+  378  git status
+  379  git status
+  380  git add driving-game
+  381  git add index main styles
+  382  git add index.html main styles
+  383  git add index.html main.js styles.css
+  384  git status
+  385  git commit -m "User can now see car issue#1 resolved"
+  386  git push origin issue-#1-user-can-see-their-car
+  387  git status
+  388  git add styles.css
+  389  git commit -m "Container class now takes up the entire width and height of the viewport"
+  390  git push origin issue-#1-user-can-see-their-car
+  391  git status
+  392  checkout master
+  393  git checkout master
+  394  git pull origin master
+  395  git checkout -b issue-#2-user-can-turn-their-car
+  396  git status
+  397  git status
+  398  git status
+  399  git status
+  400  git status
+  401  git add index.html main.js styles.css
+  402  git status
+  403  git commit -m "Issue #2 Resolved: User can now turn their car" 
+  404  git push origin issue-#2-user-can-turn-their-car
+  405  git status
+  406  git status
+  407  git checkout master
+  408  git checkout master
+  409  git status
+  410  git checkout -b issue-#3-user-can-start-their-car
+  411  git status
+  412  git checkout master
+  413  git checkout status
+  414  git checkout issue-#2-user-can-rotate-car
+  415  git branch
+  416  git issue-#2-user-can-turn-their-car
+  417  git checkout issue-#2-user-can-turn-their-car
+  418  git pull origin master
+  419  git checkout issue-#2-user-can-turn-their-car
+  420  git status
+  421  git commit -m "User can now turn their car"
+  422  git push origin issue-#2-user-can-turn-their-car
+  423  git checkout master
+  424  git pull origin master
+  425  git checkout issue-#3-user-can-start-their-car
+  426  git status
+  427  git status
+  428  git pull origin master
+  429  git status
+  430  git add main
+  431  git add main.js 
+  432  git commit -m "Synced up with master branch now" 
+  433  git commit --no-verfiy 
+  434  git commit -n "Synced with master branch"
+  435  git commit -n main.js
+  436  git commit -n main.js
+  437  git cd repos/driving-game/
+  438  cd repos/driving-game/driving-game/
+  439  status
+  440  git status
+  441  git add main.js
+  442  git status
+  443  git add index.html 
+  444  git status
+  445  git status
+  446  git add main.js
+  447  git status
+  448  git commit -m "Car now starts and move across the screen" 
+  449  git push origin issue-#3-user-can-start-their-car
+  450  git status
+  451  curl -sS https://lfz-static.s3-us-west-1.amazonaws.com/dev-environment/mac-installer.bash | bash
+  452  dev-env
+  453  dev-env
+  454  cd repos/driving-game/driving-game/
+  455  git statys
+  456  git status
+  457  git add main
+  458  git add main.js
+  459  git commit -m "Issue #4 Resolved: Car can now stop on command" 
+  460  git push origin issue-#3-user-can-start-their-car
+  461  git checkout master 
+  462  git checkout master
+  463  git pull origin master
+  464  git checkout -b issue-#5-user-can-steer-car
+  465  git checkout status
+  466  git status
+  467  git add main.js
+  468  git commit -m "Issue #5 Resolved: User can now steer their car"
+  469  git push origin issue-#5-user-can-steer-car
+  470  cd
+  471  cd repos/c0
+  472  cd repos/c0621-code-solutions/
+  473  git status
+  474  git checkout master
+  475  git pull origin master
+  476  cd
+  477  dev-env
+  478  http https://imgflip.com/api
+  479  dev-env
+  480  lastRide(43)
+  481  dev env
+  482  dev-env
+  483  git status
+  484  cd repos/c0621-code-solutions/
+  485  git status
+  486  git chcekout -b es6-const-let
+  487  git checkout -b es6-const-let
+  488  git status
+  489  git add es6-const-let
+  490  git commit -m "changed var to let or const depending on it's use case, if it was a global variable then changed to const, if it was a variable within a function that didn't need to be reassigned then it would be changed to const" 
+  491  git status
+  492  git push origin es6-const-let
+  493  dev-env
+  494  dev-env
+  495  cd repos/c0621-code-solutions/command-line-basics
+  496  cat three-virtues.txt
+  497  man ls
+  498  ls 
+  499  ls -a
+  500  ls -F
+  501  ls lfz-staff/
+  502  ls -a lfz-staff/
+  503  ls -F lfz-staff/
+  504  ls -f lfz-staff/
+  505  ls -af lfz-staff > lfz-staff/contents.txt
+  506  cat lfz-staff/contents.txt
+  507  man pwd
+  508  pwd > i-was-here.txt
+  509  ls
+  510  cat i-was-here.txt
+  511  man echo
+  512  echo 'Hello, World!'
+  513  echo 'Hello, World!' > hello.txt
+  514  cat hello.txt
+  515  man touch
+  516  touch tag-youre-it.txt
+  517  ls tag-youre-it.txt
+  518  touch boop.txt
+  519  touch boop.txt > snoot/
+  520  ls snoot/
+  521  ls
+  522  touch snoop/ > boop.txt
+  523  touch boop.txt > snoot
+  524  touch boop.txt > ls snoot
+  525  touch boop.txt > snoot
+  526  ls snoot
+  527  ls -a snoot/
+  528  ls snoot > touch boop.txt
+  529  touch snoop
+  530  touch snoop/
+  531  touch boop.txt >> snoop/
+  532  ls snoop/
+  533  ls snoop
+  534  ls /snoop
+  535  touch snoot
+  536  ls
+  537  touch snoot > boop.txt
+  538  touch boop.txt >> snoot
+  539  touch snoot >> boop.txt
+  540  touch snoot/boop.txt
+  541  ls snoot/
+  542  cat snoot/boop.txt
+  543  echo 'BOOOOOOOOOOOOOOOOOOP!' > snoot/boop.txt
+  544  man mkdir
+  545  mkdir parent
+  546  ls parent/
+  547  man mkdir
+  548  mkdir -p parent child grandchild
+  549  mkdir parent/child/grandchild
+  550  mkdir -p parent/child/grandchild
+  551  touch parent/child/grandchild/.gitkeep
+  552  ls -a
+  553  man mv
+  554  mv pokiemans pokemon
+  555  ls
+  556  man rm
+  557  rm lol.txt
+  558  ls
+  559  rm -r kill-me/
+  560  ls
+  561  man cp
+  562  cp and-then.txt no-and-then.txt
+  563  cat and-then > no-and-then.txt
+  564  cat and-then.txt > no-and-then.txt
+  565  man history
+  566  history
+  567   git status
+  568  history > command-history.txt

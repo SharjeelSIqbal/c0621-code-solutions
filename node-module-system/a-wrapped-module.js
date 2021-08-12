@@ -1,0 +1,10 @@
+console.log(typeof module.exports);
+console.log(module.exports);
+console.log(typeof module.require);
+console.log(module.require);
+console.log(typeof module);
+console.log(module);
+console.log(typeof __filename);
+console.log(__filename);
+console.log(typeof __dirname);
+console.log(__dirname);

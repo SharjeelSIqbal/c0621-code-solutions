@@ -23,10 +23,8 @@ const grades = {
 
 app.listen(3000);
 
-app.use('/', (req, res) => {
+app.get('/api/grades', (req, res) => {
   if (req.path === '/api/grades') {
     res.json(grades);
-  } else {
-    res.send(`Got a ${req.method} request!`);
   }
 });

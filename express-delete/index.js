@@ -31,11 +31,16 @@ app.get('/api/grades', (req, res) => {
   res.json(arr);
 });
 
-app.get('/api/grades/:', (req, res) => {
-  res.send(req.params);
+app.get('/api/grades/:id', (req, res) => {
+  res.send(grades[res.params.id]);
+});
+
+app.delete('/api/grades/:id', (req, res) => {
+
+  res.send(grades[req.params.id]);
+  delete grades[req.params.id];
 });
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Listening to ${port}`);
+
 });

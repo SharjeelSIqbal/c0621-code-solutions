@@ -20,11 +20,12 @@ const grades = {
     score: 92
   }
 };
-
-app.listen(3000);
+const arr = [];
 
 app.get('/api/grades', (req, res) => {
-  if (req.path === '/api/grades') {
-    res.json(grades);
+  for (const key in grades) {
+    arr.push(grades[key]);
   }
+  res.json(arr);
 });
+app.listen(3000);

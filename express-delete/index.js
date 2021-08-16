@@ -22,12 +22,13 @@ const grades = {
     score: 92
   }
 };
-const arr = [];
 
 app.get('/api/grades', (req, res) => {
+  const arr = [];
   for (const id in grades) {
     arr.push(grades[id]);
   }
+
   res.json(arr);
 });
 
@@ -37,8 +38,8 @@ app.get('/api/grades/:id', (req, res) => {
 
 app.delete('/api/grades/:id', (req, res) => {
 
-  res.send(grades[req.params.id]);
   delete grades[req.params.id];
+  res.sendStatus(204);
 });
 
 app.listen(port, () => {

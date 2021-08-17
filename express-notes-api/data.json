@@ -1,5 +1,5 @@
 {
-  "nextId": 15,
+  "nextId": 16,
   "notes": {
     "2": {
       "id": 2,
@@ -26,8 +26,8 @@
       "id": 13
     },
     "14": {
-      "content": "Ahh, I see you are still travelling. Come take ONE LAST break.",
-      "id": 14
+      "content": "PRESTO CHANGE-O!",
+      "id": "14"
     }
   }
 }

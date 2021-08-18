@@ -1,7 +1,5 @@
 select "customers"."firstName",
-"customers"."lastName",
-"payments"."amount",
-"payments"."customerId"
+"customers"."lastName"
 from "customers"
 join "payments" using ("customerId")
 order by "payments"."amount" desc

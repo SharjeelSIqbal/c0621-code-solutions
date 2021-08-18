@@ -1,9 +1,6 @@
-select "films"."title",
+select
 "customers"."firstName",
 "customers"."lastName",
-"rentals"."customerId",
-"rentals"."rentalId",
-"inventory"."inventoryId"
 from "customers"
 join "rentals" using ("customerId")
 join "inventory" using ("inventoryId")

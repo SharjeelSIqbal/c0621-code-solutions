@@ -3,8 +3,5 @@ select "customers"."firstName",
 sum("payments"."amount") as "sum"
 from "customers"
 join "payments" using ("customerId")
--- join "films" using ()
-group by "customers"."firstName",
-"customers"."lastName",
-"payments"."amount"
-order by "sum" desc;
+group by "customers"."customerId"
+order by sum("payments"."amount") desc;

@@ -23,18 +23,19 @@ console.log(sum);
 const product = numbers.reduce((initialValue, nextValues) => initialValue * nextValues);
 console.log(product);
 
-const accountClone = [...account];
-const balance = accountClone.reduce((x, balance) => {
-  x.type = 'balance';
-  if (balance.type === 'deposit') {
-    x.amount += balance.amount;
+const balancer = (initialValue, currentValue) => {
+  if (currentValue.type === 'deposit') {
+    initialValue += currentValue.amount;
   } else {
-    x.amount -= balance.amount;
+    initialValue -= currentValue.amount;
   }
-  return x;
-});
+  return initialValue;
+};
+
+const balance = account.reduce(balancer, 0);
 console.log(balance);
 
-const traitsClone = [...traits];
-const composite = traitsClone.reduce((initialValue, currentValue) => Object.assign(initialValue, currentValue));
+const compositer = (initialValue, currentValue) => Object.assign(initialValue, currentValue);
+const composite = traits.reduce(compositer, {});
 console.log(composite);
+console.log(traits);

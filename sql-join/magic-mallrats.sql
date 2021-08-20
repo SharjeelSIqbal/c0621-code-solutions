@@ -1,6 +1,6 @@
 select
 "customers"."firstName",
-"customers"."lastName",
+"customers"."lastName"
 from "customers"
 join "rentals" using ("customerId")
 join "inventory" using ("inventoryId")

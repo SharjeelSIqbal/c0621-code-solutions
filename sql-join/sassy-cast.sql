@@ -1,5 +1,5 @@
 select "actors"."firstName",
-"actors"."lastName",
+"actors"."lastName"
 from "actors"
 join "castMembers" using ("actorId")
 join "films" using ("filmId")

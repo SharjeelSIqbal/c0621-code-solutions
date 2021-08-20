@@ -49,6 +49,20 @@ app.post('/api/grades', (req, res) => {
 });
 
 app.put('/api/grades/:gradeId', (req, res) => {
+  // const sqlfindId = `
+  //   select *
+  //   from "grades"
+  //   where "gradeId";
+  //   `;
+  //   const id = [];
+
+  // db.query(sqlfindId, (err, res) => {
+  //   if(err){
+  //     res.status(500).send(err);
+  //   } else {
+
+  //   }
+  // })
   const updatedGrade = req.body;
   const values = [updatedGrade.name, updatedGrade.course, updatedGrade.score, req.params.gradeId];
   const sql = `

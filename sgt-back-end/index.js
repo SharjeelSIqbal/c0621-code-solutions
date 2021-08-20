@@ -48,47 +48,76 @@ app.post('/api/grades', (req, res) => {
   }
 });
 
-app.put('/api/grades/:gradeId', (req, res) => {
-  // const sqlfindId = `
-  //   select *
-  //   from "grades"
-  //   where "gradeId";
-  //   `;
-  //   const id = [];
+// function getIdNumber (param){
+//   param = parseInt(param, 10);
+//   app.get('/api/grades/:gradeId'), (req, res){
+//     if(!Number.isInteger(param) || param <= 0){
+//       res.status(400).json({
+//         error: '"gradeId" must be positive integer'
+//       })
+//       return;
+//     }
+//     const sql = `select "gradeId" from "grades"`
 
-  // db.query(sqlfindId, (err, res) => {
-  //   if(err){
-  //     res.status(500).send(err);
-  //   } else {
+//     const params = [param];
+//     db.query(sql, params)
+//     .then(results => {
+//       const grade = results.rows[0];
+//       if(!grade){
+//         res.status(404).send(`Cannot find ${params[0]}`);
+//         return;
+//       } else {
+//       }
+//     })
+//     .catch(err)
+//   });
+// }
 
-  //   }
-  // })
-  const updatedGrade = req.body;
-  const values = [updatedGrade.name, updatedGrade.course, updatedGrade.score, req.params.gradeId];
-  const sql = `
-  update "grades"
-  set "name" = $1,
-      "course" = $2,
-      "score" = $3
-  where "gradeId" = $4
-  returning *;;
-  `;
-  if (!req.params.gradeId || req.params.gradeId < 0) {
-    res.status(400).send('Bad Request');
-    return;
-  }
-  db.query(sql, values, (err, results) => {
-    if (err) {
-      res.status(404).send(results.rows);
-      return;
-    }
-    if (results.rows.length > 0) {
-      res.status(200).send(results.rows);
-      return;
-    }
-    res.status(500).send('Unexpected error occurred');
-  });
-});
+// app.put('/api/grades/:gradeId'), (req, res) {
+
+// }
+
+// app.put('/api/grades/:gradeId', (req, res) => {
+//   // const sqlfindId = `
+//   //   select *
+//   //   from "grades"
+//   //   where "gradeId";
+//   //   `;
+//   //   const id = [];
+
+//   // db.query(sqlfindId, (err, res) => {
+//   //   if(err){
+//   //     res.status(500).send(err);
+//   //   } else {
+
+//   //   }
+//   // })
+//   const updatedGrade = req.body;
+//   const values = [updatedGrade.name, updatedGrade.course, updatedGrade.score, req.params.gradeId];
+//   const sql = `
+//   update "grades"
+//   set "name" = $1,
+//       "course" = $2,
+//       "score" = $3
+//   where "gradeId" = $4
+//   returning *;;
+//   `;
+//   if (!req.params.gradeId || req.params.gradeId < 0) {
+//     res.status(400).send('Bad Request');
+//     return;
+//   }
+//   db.query(sql, values, (err, results) => {
+//     if (err) {
+//       res.status(404).send(results.rows);
+//       return;
+//     }
+//     if (results.rows.length > 0) {
+//       res.status(200).send(results.rows);
+//       return;
+//     }
+//     res.status(500).send('Unexpected error occurred');
+//   });
+// });
 
 // app.post('/api/grades', (req, res) => {
 //   const newGrade = req.body;

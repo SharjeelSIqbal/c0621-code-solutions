@@ -11,38 +11,14 @@ const names = [
   'Janese',
   'Donna'
 ];
-const evenNumbers = [];
-numbers.filter(even => {
-  if (even % 2 === 0) {
-    evenNumbers.push(even);
-  }
-  return evenNumbers;
-});
+const evenNumbers = numbers.filter(even => even % 2 === 0);
 console.log(evenNumbers);
 
-const overFive = [];
-numbers.filter(over => {
-  if (over > 5) {
-    overFive.push(over);
-  }
-  return overFive;
-});
+const overFive = numbers.filter(over => over > 5);
 console.log(overFive);
 
-const startWithE = [];
-names.filter(e => {
-  if (e[0] === 'E') {
-    startWithE.push(e);
-  }
-  return startWithE;
-});
+const startWithE = names.filter(e => e[0] === 'E');
 console.log(startWithE);
 
-const haveD = [];
-names.filter(d => {
-  if (d.toLowerCase().includes('d')) {
-    haveD.push(d);
-  }
-  return haveD;
-});
+const haveD = names.filter(d => d.toLowerCase().includes('d'));
 console.log(haveD);

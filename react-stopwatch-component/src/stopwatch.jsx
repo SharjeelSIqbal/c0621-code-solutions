@@ -10,6 +10,7 @@ class Stopwatch extends React.Component {
     this.tick = this.tick.bind(this);
     this.start = this.start.bind(this);
     this.stop = this.stop.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   tick() {
@@ -32,31 +33,35 @@ class Stopwatch extends React.Component {
     this.setState({ pressed: false });
   }
 
+  reset() {
+    this.setState({ time: 0 });
+  }
+
   render() {
     if (this.state.pressed === false) {
       return (
         <div>
        <div className="row">
-        <div className="circle row full">
+        <div onClick={this.reset}className="circle row full">
           <h1>{this.state.time}</h1>
         </div>
       </div>
         <div className="row full">
-          <i onClick={this.start} className="fas fa-pause"></i>
+            <i onClick={this.start} className="fas fa-play"></i>
       </div>
     </div>
       );
     } else {
-
       return (
         <div>
         <div className="row">
-          <div className="circle row full">
+          <div onClick={this.reset} className="circle row full">
             <h1>{this.state.time}</h1>
           </div>
         </div>
         <div className="row full">
-          <i onClick={this.stop}className="fas fa-play"></i>
+            <i onClick={this.stop} className="fas fa-pause"></i>
+
         </div>
       </div>
       );

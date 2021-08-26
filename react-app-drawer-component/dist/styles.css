@@ -17,12 +17,26 @@ h1 {
   font-size: 42px;
 }
 
-.menu {
-  position: absolute;
+.hidden {
+  overflow: hidden;
   top: 0;
   left: 0;
+  position: fixed;
   background-color: white;
-  width: 100px;
+  transition: transform 1s ease-in;
+  transform: translateX(-500px);
+  width: 500px;
+  height: 100vh;
+}
+
+.menu {
+  top: 0;
+  left: -500px;
+  position: fixed;
+  background-color: white;
+  transition: transform 1s ease-in-out;
+  transform: translateX(500px);
+  width: 500px;
   height: 100vh;
 }
 

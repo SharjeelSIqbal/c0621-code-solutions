@@ -18,7 +18,7 @@ class Stopwatch extends React.Component {
   }
 
   start() {
-    this.setState({ pressed: true, time: 0 }, () => {
+    this.setState({ pressed: true }, () => {
       const timer = setInterval(() => {
         if (this.state.pressed === true) {
           this.tick();

@@ -18,7 +18,7 @@ h1 {
 
 .menu {
   top: 0;
-  left: -500px;
+  left: 0;
   position: absolute;
   background-color: white;
   width: 500px;

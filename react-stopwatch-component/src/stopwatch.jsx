@@ -34,7 +34,9 @@ class Stopwatch extends React.Component {
   }
 
   reset() {
-    this.setState({ time: 0 });
+    if (this.state.pressed === false) {
+      this.setState({ time: 0 });
+    }
   }
 
   render() {

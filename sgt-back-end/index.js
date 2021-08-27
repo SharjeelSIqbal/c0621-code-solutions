@@ -24,7 +24,8 @@ app.get('/api/grades', (req, res) => {
       res.status(200).json(results.rows, null, 2);
     })
     .catch(err => {
-      res.status(500).json(err);
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error has occured' });
     });
 });
 
@@ -38,7 +39,7 @@ app.post('/api/grades', (req, res) => {
   returning *;
   `;
   if (!newGrade.name || !newGrade.course || !newGrade.score) {
-    res.status(400).json('Bad request');
+    res.status(400).json({ error: 'Bad request' });
     return;
   }
   db.query(sql, values)
@@ -46,7 +47,8 @@ app.post('/api/grades', (req, res) => {
       res.status(201).json(results.rows[0], null, 2);
     })
     .catch(err => {
-      res.status(500).json(err);
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error has occured' });
     });
 });
 
@@ -62,7 +64,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
   returning *;;
   `;
   if (!req.params.gradeId || req.params.gradeId < 0) {
-    res.status(400).json('Bad Request');
+    res.status(400).json({ error: 'Bad Request' });
     return;
   }
   db.query(sqlUpdate, values)
@@ -70,10 +72,11 @@ app.put('/api/grades/:gradeId', (req, res) => {
       if (results.rows.length > 0) {
         res.status(200).json(results.rows[0]);
       } else {
-        res.status(404).json(`${req.params.gradeId} does not exist`);
+        res.status(404).json({ error: `${req.params.gradeId} does not exist` });
       }
     }).catch(err => {
-      res.status(500).json(err);
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error has occured' });
     });
 });
 
@@ -85,7 +88,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   returning *
   `;
   if (!req.params.gradeId || req.params.gradeId < 0) {
-    res.status(400).json('Bad Request');
+    res.status(400).json({ error: 'Bad Request' });
     return;
   }
   db.query(sqlDelete, values)
@@ -93,11 +96,12 @@ app.delete('/api/grades/:gradeId', (req, res) => {
       if (results.rows.length > 0) {
         res.sendStatus(204);
       } else {
-        res.status(400).json(`${req.params.gradeId} does not exist`);
+        res.status(404).json({ error: `${req.params.gradeId} does not exist` });
       }
     })
     .catch(err => {
-      res.status(500).json(err);
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error has occured' });
     });
 });
 

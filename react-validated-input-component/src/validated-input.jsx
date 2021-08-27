@@ -31,13 +31,16 @@ class ValidatedInput extends React.Component {
   }
 
   render() {
+    let className;
+    if (this.state.both === true) {
+      className = 'input incorrect';
+    } else {
+      className = 'input correct';
+    }
     return (
       <form className="full">
         <div className="col">
-        {this.state.both && <input className="input incorrect" onChange={this.handleChange} type="password" value={this.state.value} /> }
-        { !this.state.both &&
-        <input className="input correct" onChange={this.handleChange} type="password" value={this.state.value} />
-        }
+          <input className={className} onChange={this.handleChange} type="password" value={this.state.value} />
           {this.state.none && <p>A password is required</p>}
           {this.state.short && !this.state.none &&
             <p> Your password is too short!</p>

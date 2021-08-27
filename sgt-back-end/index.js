@@ -5,10 +5,7 @@ const app = express();
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
   ssl: {
-    rejectUnauthorized: false,
-    host: 'localhost',
-    port: 8081,
-    database: 'studentGradeTable'
+    rejectUnauthorized: false
   }
 });
 

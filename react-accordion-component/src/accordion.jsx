@@ -5,6 +5,7 @@ class Accordion extends React.Component {
     super(props);
     this.state = {
       open: false,
+      close: true,
       clicked: ''
     };
     this.openClose = this.openClose.bind(this);
@@ -12,39 +13,37 @@ class Accordion extends React.Component {
 
   openClose(e) {
     const clickedElement = e.target.getAttribute('data-view');
-    this.setState({ open: !this.state.open, clicked: clickedElement }, () => {
-    });
-  }
-
-  tab(e) {
-
+    if (this.state.open === false) {
+      this.setState({ open: true, clicked: clickedElement });
+    } if (this.state.open === true && clickedElement !== this.state.clicked) {
+      this.setState({ clicked: clickedElement });
+    } if (this.state.open === true && clickedElement === this.state.clicked) {
+      this.setState({ open: false });
+    }
   }
 
   render() {
-
-    const notHidden = this.state.open ? 'not-hidden' : 'hidden';
-
-    return (
-      <>
-      {
-        this.props.dataView.map(element => {
-          return (
-            <div onClick={this.openClose} key={element.key}>
-              <h1 data-view={element.key}>{element.title}</h1>
-
-            </div>
-          );
-        })
+    let hiddenShown;
+    const elements = this.props.dataView.map(element => {
+      if (element.key === this.state.clicked && this.state.open) {
+        hiddenShown = 'hidden shown';
+      } else {
+        hiddenShown = 'hidden';
       }
-        {
-          this.props.dataView
-            .filter(element => element.key === this.state.clicked)
-            .map(element => {
-              return (<p className={notHidden} key={element.key}>{element.text}</p>);
-            })
-        }
-
-      </>
+      return (
+        <div onClick={this.openClose} key={element.key} className="border-data-views col-full title-tab">
+          <h1 data-view={element.key}>{element.title}</h1>
+          <p className={hiddenShown}> {element.text}</p>
+          {/* { element.key === this.state.clicked && this.state.open &&
+              hiddenShown = 'hidden shown'
+          } */}
+       </div>
+      );
+    });
+    return (
+    <div className="container col-full border-top">
+      {elements}
+    </div>
     );
   }
 }

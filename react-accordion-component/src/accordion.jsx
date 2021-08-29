@@ -5,7 +5,6 @@ class Accordion extends React.Component {
     super(props);
     this.state = {
       open: false,
-      close: true,
       clicked: ''
     };
     this.openClose = this.openClose.bind(this);
@@ -34,9 +33,6 @@ class Accordion extends React.Component {
         <div onClick={this.openClose} key={element.key} className="border-data-views col-full title-tab">
           <h1 data-view={element.key}>{element.title}</h1>
           <p className={hiddenShown}> {element.text}</p>
-          {/* { element.key === this.state.clicked && this.state.open &&
-              hiddenShown = 'hidden shown'
-          } */}
        </div>
       );
     });

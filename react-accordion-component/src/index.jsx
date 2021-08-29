@@ -30,6 +30,6 @@ const viewData = [
 
 ReactDOM.render(
 <div>
-  <Accordion dataView={viewData}/>
+  <Accordion dataView={viewData} />
 </div>,
 document.getElementById('root'));

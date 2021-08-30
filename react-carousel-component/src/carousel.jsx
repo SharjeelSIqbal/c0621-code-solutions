@@ -44,8 +44,10 @@ class Carousel extends React.Component {
     // const rotatidng = setInterval(this.next, 3000);
 
     return (<div className="row true-center">
-      <div className="row true-center">
-      <img src={this.state.image} alt="" />
+      <div className="container row space-between">
+        <i className="fas fa-chevron-left"></i>
+      <img className="col-80" src={this.state.image} alt="" />
+        <i className="fas fa-chevron-right"></i>
       </div>
     </div>);
   }

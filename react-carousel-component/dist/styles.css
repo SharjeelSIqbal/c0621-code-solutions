@@ -21,7 +21,7 @@
   width: 80%;
 }
 
-.space-around {
+.space-between {
   justify-content: space-evenly;
   align-items: center;
 }

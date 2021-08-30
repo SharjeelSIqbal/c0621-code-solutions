@@ -4,7 +4,6 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
       clicked: ''
     };
     this.openClose = this.openClose.bind(this);
@@ -12,19 +11,19 @@ class Accordion extends React.Component {
 
   openClose(e) {
     const clickedElement = e.target.getAttribute('data-view');
-    if (this.state.open === false) {
-      this.setState({ open: true, clicked: clickedElement });
-    } if (this.state.open === true && clickedElement !== this.state.clicked) {
+    if (this.state.clicked === '') {
       this.setState({ clicked: clickedElement });
-    } if (this.state.open === true && clickedElement === this.state.clicked) {
-      this.setState({ open: false });
+    } else if (this.state.clicked === clickedElement) {
+      this.setState({ clicked: '' });
+    } else if (this.state.clicked !== clickedElement) {
+      this.setState({ clicked: clickedElement });
     }
   }
 
   render() {
     let hiddenShown;
     const elements = this.props.dataView.map(element => {
-      if (element.key === this.state.clicked && this.state.open) {
+      if (element.key === this.state.clicked) {
         hiddenShown = 'hidden shown';
       } else {
         hiddenShown = 'hidden';

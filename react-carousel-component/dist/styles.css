@@ -1,18 +1,35 @@
-/*
-  img{
-    transition: transform 1s;
-  } */
-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 600px;
-  height: 600px;
+.row {
+  display: flex;
 }
 
-div {
+.true-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   margin: 0 auto;
-  display: flex;
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 800px;
+  border: 1px solid black;
+}
+
+.col-10 {
+  width: 100%;
+}
+
+.col-80 {
+  width: 80%;
+}
+
+.space-around {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.image-container {
+  height: 500px;
+}
+
+i {
+  font-size: 48px;
 }

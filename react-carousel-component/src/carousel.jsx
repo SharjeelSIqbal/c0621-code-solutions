@@ -1,34 +1,54 @@
-// import React from 'react';
+import React from 'react';
 
-// class Carousel extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       image: 0
-//     };
-//     this.nextImage = this.nextImage.bind(this);
-//     this.timer = this.timer.bind(this);
-//   }
+class Carousel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 0,
+      image: this.props.pokemon[0].url
+    };
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
+  }
 
-//   nextImage() {
-//     this.setState({ image: this.state.image + 1 } => {
-//       if(this.state.image === this.props.shrek.length){
-//         this.setState({image: 0})
-//       }
-//     });
-//   }
+  next() {
+    if (this.state.counter < this.props.pokemon.length) {
+      this.setState({ counter: this.state.counter + 1 }, () => {
+        if (this.state.counter === this.props.pokemon.length) {
+          this.setState({ counter: 0 }, () => {
+            this.setState({ image: this.props.pokemon[this.state.counter].url });
+          });
+        } else {
+          this.setState({ image: this.props.pokemon[this.state.counter].url });
+        }
+      });
+    }
+  }
 
-//   timer(e) {
-//     setInterval(this.nextImage, 1000);
-//   }
+  prev() {
+    if (this.state.counter >= 0) {
+      this.setState({ counter: this.state.counter - 1 }, () => {
+        if (this.state.counter === -1) {
+          this.setState({ counter: this.props.pokemon.length - 1 }, () => {
+            this.setState({ image: this.props.pokemon[this.state.counter].url });
+          });
+        } else {
+          this.setState({ image: this.props.pokemon[this.state.counter].url });
+        }
+      });
+    }
+  }
 
-//   render() {
-//     return (
-//       <div onLoadStart={this.timer}>
-//         <img src={this.props.shrek[0].url} alt="" />
-//       </div>
-//     );
-//   }
-// }
+  render() {
 
-// export default Carousel;
+    // const rotatidng = setInterval(this.next, 3000);
+
+    return (<div className="row true-center">
+      <div className="row true-center">
+      <img src={this.state.image} alt="" />
+      </div>
+    </div>);
+  }
+}
+
+export default Carousel;

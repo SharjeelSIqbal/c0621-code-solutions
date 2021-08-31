@@ -36,19 +36,41 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
-    const duplicateList = [...this.state.todos];
-    const todoItem = duplicateList
-      .filter(element => element.todoId === todoId)
-      .map(element => element);
-    todoItem[0].isCompleted = !todoItem[0].isCompleted;
-    fetch(`/api/todos/${todoId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ isCompleted: todoItem[0].isCompleted })
-    })
-      .then(res => res.json())
-      .then(this.setState({ todos: duplicateList }))
-      .catch(err => console.error(err));
+    // const duplicateList = [...this.state.todos];
+    // const todoItem = duplicateList.find((element, index) => element.todoId === todoId);
+    // const newObj = {};
+    // const updatedItem = Object.assign(todoItem, newObj);
+    // console.log(updatedItem);
+    // console.log(newObj);
+    // console.log(todoItem);
+    // fetch(`/api/todos/${todoId}`, {
+    //   method: 'PATCH',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(updatedItem)
+    // })
+    //   .then(res => {
+    //     duplicateList.splice(duplicateList.indexOf(updatedItem), 1, updatedItem);
+    //     return res.json();
+    //   })
+    //   .then(data => this.setState({ todos: duplicateList }))
+    //   .catch(err => console.error(err));
+    /**
+   * Find the index of the todo with the matching todoId in the state array.
+   * Get its "isCompleted" status.
+   * Make a new object containing the opposite "isCompleted" status.
+   * Use fetch to send a PATCH request to `/api/todos/${todoId}`
+   * Then 😉, once the response JSON is received and parsed,
+   * replace the old todo in the state array.
+   *
+   * NOTE: "toggle" means to flip back and forth, so clicking a todo
+   * in the list should "toggle" its isCompleted status back and forth.
+   *
+   * Do not mutate the original state array, nor any objects within it.
+   * https://reactjs.org/docs/optimizing-performance.html#the-power-of-not-mutating-data
+   *
+   * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
+   * And specify the "Content-Type" header as "application/json"
+   */
   }
 
   render() {

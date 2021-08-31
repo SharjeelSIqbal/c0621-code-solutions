@@ -37,11 +37,14 @@ export default class App extends React.Component {
 
   toggleCompleted(todoId) {
     const duplicateList = [...this.state.todos];
-    const todoItem = duplicateList.filter(element => element.todoId === todoId);
+    const todoItem = duplicateList
+      .filter(element => element.todoId === todoId)
+      .map(element => element);
+    todoItem[0].isCompleted = !todoItem[0].isCompleted;
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ isCompleted: !todoItem[0].isCompleted })
+      body: JSON.stringify({ isCompleted: todoItem[0].isCompleted })
     })
       .then(res => res.json())
       .then(this.setState({ todos: duplicateList }))

@@ -8,7 +8,7 @@ const db = new pg.Pool({
     rejectUnauthorized: false
   }
 });
-
+//
 app.use(express.json());
 
 app.get('/api/grades', (req, res) => {

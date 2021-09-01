@@ -52,9 +52,10 @@ app.post('/api/auth/sign-in', (req, res, next) => {
 
   const sql = `
   select "userId",
-  "hashedPassword"
+  "hashedPassword",
+  "username"
   from "users"
-  where "username" = ($1);
+  where "username" = ($1)
   `;
   const params = [username];
   db.query(sql, params)
@@ -71,7 +72,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
             if (verification) {
               const user = {
                 userId: result.rows[0].userId,
-                hashedPassword: result.rows[0].hashedPassword
+                username: result.rows[0].username
               };
               const token = jwt.sign(user, process.env.TOKEN_SECRET);
 

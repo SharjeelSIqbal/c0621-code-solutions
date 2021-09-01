@@ -1,0 +1,51 @@
+body {
+  margin: auto auto;
+}
+
+.hidden {
+  overflow: scroll;
+  transition: height 1s;
+  height: 0;
+}
+
+.shown {
+  overflow: scroll;
+  transition: height 1s;
+  height: 300px;
+}
+
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 0.2rem;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.border-data-views {
+  padding-left: 15px;
+  max-width: 500px;
+  border-bottom: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+.title-tab:nth-child(odd) {
+  background-color: #125d98;
+  color: #ddd;
+}
+
+.title-tab:nth-child(even) {
+  background-color: #3c8dad;
+  color: #ddd;
+}

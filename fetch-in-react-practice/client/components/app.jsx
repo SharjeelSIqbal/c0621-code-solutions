@@ -36,24 +36,21 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
-    // const duplicateList = [...this.state.todos];
-    // const todoItem = duplicateList.find((element, index) => element.todoId === todoId);
-    // const newObj = {};
-    // const updatedItem = Object.assign(todoItem, newObj);
-    // console.log(updatedItem);
-    // console.log(newObj);
-    // console.log(todoItem);
-    // fetch(`/api/todos/${todoId}`, {
-    //   method: 'PATCH',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(updatedItem)
-    // })
-    //   .then(res => {
-    //     duplicateList.splice(duplicateList.indexOf(updatedItem), 1, updatedItem);
-    //     return res.json();
-    //   })
-    //   .then(data => this.setState({ todos: duplicateList }))
-    //   .catch(err => console.error(err));
+    const duplicateList = [...this.state.todos];
+    const todoItem = duplicateList.find(element => element.todoId === todoId);
+    const indexTodoItem = duplicateList.indexOf(todoItem);
+    const completeStatus = { isCompleted: !todoItem.isCompleted };
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(completeStatus)
+    })
+      .then(res => res.json())
+      .then(data => {
+        duplicateList[indexTodoItem] = data;
+        this.setState({ todos: duplicateList });
+      })
+      .catch(err => console.error(err));
     /**
    * Find the index of the todo with the matching todoId in the state array.
    * Get its "isCompleted" status.

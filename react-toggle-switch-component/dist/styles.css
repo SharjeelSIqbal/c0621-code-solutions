@@ -1,0 +1,49 @@
+.circle {
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border: 1px gray solid;
+  border-radius: 50%;
+  margin-inline-start: 0;
+}
+
+.button-off {
+  transition: transform 1s;
+  transform: translateX(50px);
+}
+
+.button-on {
+  transition: transform 1s;
+  transform: translateX(0);
+}
+
+.on {
+  transition: background-color 0.5s ease-in;
+  background-color: green;
+}
+
+.off {
+  transition: background-color 0.5s ease-in;
+  background-color: gray;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  padding-left: 3rem;
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+button {
+  position: relative;
+  background-color: gray;
+  height: 3rem;
+  width: 6rem;
+  border: none;
+  border-radius: 25px;
+}

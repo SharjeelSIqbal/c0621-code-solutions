@@ -69,8 +69,6 @@ app.post('/api/auth/sign-in', (req, res, next) => {
               throw new ClientError(401, 'passwords do not match');
             }
             if (verification) {
-              // console.log(result.rows[0]);
-              // console.log(verification);
               const user = {
                 userId: result.rows[0].userId,
                 hashedPassword: result.rows[0].hashedPassword

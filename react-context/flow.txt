@@ -1,0 +1,52 @@
+User can sign up => {
+  I. App.jsx
+    1: App
+      a. The class component App builds its constructor with one parameter props
+         A. The construtor takes one parameter, props
+         B. The super function is called with one argument, props
+         C. An object literal is assigned to the state property of the this object
+            with 3 properties the key user value null, the key isAuthorizing value true,
+            the key route with the value of the return of the function parseRoute which is imported
+            from ./lib/parse-route
+            Aa. The parseRoute function is defined in the parse-route.js
+                with one parameter.
+            Ab. There's an if statement with the conditional that if
+                the first index of hashRoute is '#' then hashRoute
+                replaces '#' with '' and is reassigned with the new value
+            Ac. The first and second index's are destructured from the return of the
+                split method of the hashRoute object with one argument '?';
+                and assigned to the constant variable in this order: path and queryString
+            Ad. The URLSearchParams function is then called with the `new` operator
+                with one argument queryString and assigned to params
+            Ae. The function then returns an object literal with two properties
+                the key path with the value path and the key params with the value params
+          D. The bind method is called on the handleSignIn property of the `this` object
+             with one argument, `this` and the return of method is assigned to the
+             handleSignIn property of the this object
+          C. The bind method is called on the handleSignOut property of the this object
+             with one argument `this` and the return of the method is assigned to the
+             handleSignOut property of the this object.
+      b. Then the App class renders the page by calling the render function with no arguments
+         A.
+    2. ComponentDidMount
+      a. ComponentDidMunt triggers and listens for a hashchange
+      b. checks the localstorage for a jwt signature
+         that indicates whether a user is already logged in or not.
+      c. User then checks if the token is true. If the token is true
+         then the decodeToken function is called which was imported from
+         ./lib/decode-token
+         A. DecodeToken takes one parameter and deconstructs the second index
+            of token that split the string with '.' as an argument
+         B. The atob method is called to decode the base64 encoded encodedPayload variable
+            and is assigned as a JSON string to the const variable jsonPayload
+         C. The JSON.parse is called with 1 argument jsonPayload and the return value
+            is then assigned to the constant variable payload.
+         D. The variable payload is then returneed from the decodedToken function
+            bring us back to the app.jsx
+      d. If the token is false null is assigned to the constant variable user
+      e. The setState method of the this object is called with one argument an
+         object literal with two properties the key user and value of the const variable
+         user and the key isAuthorizing with the value of false
+
+
+}

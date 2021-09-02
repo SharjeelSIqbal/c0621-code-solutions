@@ -27,8 +27,20 @@ User can sign up => {
              with one argument `this` and the return of the method is assigned to the
              handleSignOut property of the this object.
       b. Then the App class renders the page by calling the render function with no arguments
-         A.
-    2. ComponentDidMount
+         A. An if statement with the condition isAuthorizing property of the state property
+            of the this object is true return nothing
+         B. If it is false then user and route is destructured from the state property of the `this`
+            object.
+         C. handleSign in and handleSignOut is destructured from the `this` object
+         D. An object literal with properties: `user`, `route`, `handleSignIn`, `handleSignOut` is being
+            assigned to the contextValue
+         E. The return App class finally returns a React element
+    2. App class Return
+      a. The prop of Porvider property of the AppContext React Element is given the prop
+         of the key `value` and the value of `contextValue`
+      b. The children of AppContext are gifted the object `contextValue`
+      c.
+    3. ComponentDidMount
       a. ComponentDidMunt triggers and listens for a hashchange
       b. checks the localstorage for a jwt signature
          that indicates whether a user is already logged in or not.

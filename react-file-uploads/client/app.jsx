@@ -7,6 +7,19 @@ export default class App extends React.Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const postalService = {
+      method: 'POST',
+      body: formData
+    };
+    fetch('/api/uploads', postalService)
+      .then(res => {
+        console.log(res.body);
+        return event.target.reset();
+      })
+    // eslint-disable-next-line no-console
+      .catch(err => console.error(err));
     /**
      * - prevent the browser from performing default form submission behavior
      * - create a new FormData object, passing in the event.target

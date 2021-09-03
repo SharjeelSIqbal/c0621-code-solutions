@@ -9,5 +9,5 @@ function updateHeading($h1) {
     $h1.text('Hello, Webpack!');
   }
 }
-
+//
 setInterval(updateHeading, 1000, $('#hello-world'));

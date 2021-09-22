@@ -13,7 +13,11 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    this.rotating = setInterval(this.next, 1000);
+    this.rotating = setInterval(this.next, 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.rotating);
   }
 
   next(e) {
@@ -51,13 +55,14 @@ class Carousel extends React.Component {
   }
 
   openPokeball(e) {
-    const counter = e.target.getAttribute('value');
-    this.setState({ image: this.props.pokemon[counter].url });
+    const counter = parseInt(e.target.getAttribute('value'));
+    this.setState({ image: this.props.pokemon[counter].url, counter });
+    this.reset();
   }
 
   reset() {
     clearInterval(this.rotating);
-    this.rotating = setInterval(this.next, 2000);
+    this.rotating = setInterval(this.next, 3000);
   }
 
   render() {

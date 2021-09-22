@@ -70,14 +70,15 @@ class Carousel extends React.Component {
     return (
     <>
     <div className="container padding">
-    <div className="row true-center">
       <div>
+
         <div className="row space-between col-100">
-          <i onClick={this.prev} className="fas fa-chevron-left"></i>
-          <img className="col-80" src={this.state.image} alt="" />
-          <i onClick={this.next} className="fas fa-chevron-right"></i>
+          <i onClick={this.prev} className="margin-arrows fas fa-chevron-left"></i>
+          <div className="picture-container">
+           <img className="col-100 " src={this.state.image} alt="" />
+          </div>
+          <i onClick={this.next} className="margin-arrows fas fa-chevron-right"></i>
         </div>
-      </div>
       </div>
       <div className="row true-center col-100">
         {this.props.pokemon.map((element, index) => this.state.image === element.url
@@ -85,7 +86,8 @@ class Carousel extends React.Component {
           : <img key={element.url} onClick={this.openPokeball} value={index} src={'../images/icons8-pokeball-48.png'} />
         )
         }
-      </div>
+        </div>
+
     </div>
 
     </>

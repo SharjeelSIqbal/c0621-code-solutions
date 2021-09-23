@@ -8,3 +8,4 @@ function append(list, value) {
   }
   list.next = newList;
 }
+//

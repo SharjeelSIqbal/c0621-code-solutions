@@ -1,90 +1,57 @@
-I. App.jsx
-  1: App
-    a. The class component App builds its constructor with one parameter props
-        A. The construtor takes one parameter, props
-        B. The super function is called with one argument, props
-        C. An object literal is assigned to the state property of the this object
-          with 3 properties the key user value null, the key isAuthorizing value true,
-          the key route with the value of the return of the function parseRoute which is imported
-          from ./lib/parse-route
-          Aa. The parseRoute function is defined in the parse-route.js
-              with one parameter.
-          Ab. There's an if statement with the conditional that if
-              the first index of hashRoute is '#' then hashRoute
-              replaces '#' with '' and is reassigned with the new value
-          Ac. The first and second index's are destructured from the return of the
-              split method of the hashRoute object with one argument '?';
-              and assigned to the constant variable in this order: path and queryString
-          Ad. The URLSearchParams function is then called with the `new` operator
-              with one argument queryString and assigned to params
-          Ae. The function then returns an object literal with two properties
-              the key path with the value path and the key params with the value params
-        D. The bind method is called on the handleSignIn property of the `this` object
-            with one argument, `this` and the return of method is assigned to the
-            handleSignIn property of the this object
-        C. The bind method is called on the handleSignOut property of the this object
-            with one argument `this` and the return of the method is assigned to the
-            handleSignOut property of the this object.
-    b. Then the App class renders the page by calling the render function with no arguments
-        A. An if statement with the condition isAuthorizing property of the state property
-          of the this object is true return nothing
-        B. If it is false then user and route is destructured from the state property of the `this`
-          object.
-        C. handleSign in and handleSignOut is destructured from the `this` object
-        D. An object literal with properties: `user`, `route`, `handleSignIn`, `handleSignOut` is being
-          assigned to the contextValue
-        E. The return App class finally returns a React element
-  2. App class Return
-    a. The prop of Porvider property of the AppContext React Element is given the prop
-        of the key `value` and the value of `contextValue`
-    b. The children of AppContext are gifted the object `contextValue`
-    c. The renderPage method of the `this` object is called with no arguments
-        A. the property path is destructured from the route property of the state property of the
-          `this` object.
-        B. A if statement checks if the path is strictly equal to ''
-          if it is then the the render method of the App class returns the Home
-          component
-        C. If path is strictly equal to the 'sign-in' or 'sign-up' it returns the Auth
-          component
-        D. Else the renderPage function returns the NotFound component
-  3. ComponentDidMount
-    a. ComponentDidMunt triggers and listens for a hashchange
-    b. checks the localstorage for a jwt signature
-        that indicates whether a user is already logged in or not.
-    c. User then checks if the token is true. If the token is true
-        then the decodeToken function is called which was imported from
-        ./lib/decode-token
-        A. DecodeToken takes one parameter and deconstructs the second index
-          of token that split the string with '.' as an argument
-        B. The atob method is called to decode the base64 encoded encodedPayload variable
-          and is assigned as a JSON string to the const variable jsonPayload
-        C. The JSON.parse is called with 1 argument jsonPayload and the return value
-          is then assigned to the constant variable payload.
-        D. The variable payload is then returneed from the decodedToken function
-          bring us back to the app.jsx
-    d. If the token is false null is assigned to the constant variable user
-    e. The setState method of the this object is called with one argument an
-        object literal with two properties the key user and value of the const variable
-        user and the key isAuthorizing with the value of false
 
 
-II. Sign up
-  1. The app sends a post request to the server once the user clicks the submit button
-     on the sign up page.
-  2. The req.body is destructured and put into two variables username or password
-  3. If either of those variables don't exist then the client throws an error 400 and that is the end of the function
-  4. If they both exist we use argon to hash the password and put the result into a promise
-     that sends a sql query over to the database inserting the new username and hashedpassword and the client
-     receives the userId, username, and the day/time it was created along with a status 201 confirming that it was created
-  5. If the promise fails we catch the error and send it over to express to deal with it
 
-III. Sign-in
-  1. The app deconstructs the body property of the request object into two constant variables
-     username and password.
-  2. If either of those don't exist the client trhows a 401 error message indicating that the username or password has an invalid request
-     and that returns from the function
-  3. If they both exist we query the database selecting getting the username and the hashpassword
-     where the constant variable username value matches up with what's in the database.
-  4. After retreiving information from the db we verify the hashpassword with the password using argon2
-     if the passwords do not match after that the client throws a 401 error stating an invalid and that is the return of the post
-  5. Otherwise the client creates a payload and signs a token with the payload and the
+ I. Sign up
+  1. The app asks the user for information via form
+  2. The user enters a username and password, form won't acccept any empty text inputs
+  3. Once the user clicks the `Register` button, the form uses a fetch request to the database to store
+     the username and password
+  4. Before they are stored, the server checks to see if the username and password exists
+  5. If they don't exist then throw a 400 error asking for both of those entries
+  6. If they do exist, then proceed.
+  7. Password is passed as an argument to argon2's hash method.
+  8. The password turns into argons new hashedpassword
+  9. the return is a database query with the query and the parameters
+ 10. Then the db queries the database and a user is returned from the db query and the client receives
+     a 201
+ 12. If at any point there is an error, the catch method grabs it and sends it to express to deal with
+
+II.Sign in
+  1. The client asks for a users username and password via a form element
+  2. The user enters their username and password, the form won't accept any empty inputs
+  3. When the user click's sign in the form is submitted and a request body is sent for review
+  4. The server recieves the username and password via the request body
+  5. It checks if the username and password exists.
+  6. It first checks the server for any username
+  7. If one does exists it fills up a destructured array with one index (in this case there can be many usernames of the same value
+     , this is generally not the case for most website)
+  7. If a user name doesn't exist it throws a 404 error invalid login
+  8. If the username does exist it destructures the user object and returns the
+    argon2 process.
+  9. First argon2 takes the hashed password and the password from reqBody and
+     decrypts the hashed password back to it's original form
+  10. It then returns a boolean from the verify method and if that boolean is false then
+      the client recieves a 401 error saying 'invalid login'
+  11. If the passwords match a payload is created with userId and username
+  12. A token is also created with a sight method of the jwt object (jSON web token)
+      the token contains the payload and the TOKEN_SECRET
+  13. A response is give to the client with the token and a property name user with the payload information
+
+III. User can stay signed in (even if they refresh the page)
+  1. When the client receieves the okay status from the server the response gives a user
+  2. And the handleSignIn function takes one argument which is the payload and the token and sets
+     a key with the value of token to the local localStorage
+  3. When the react elements mount the browser checks the local storage for the key of
+     'react-context-jst'
+  4. If the token exists then it runs the decode token function
+     it takes the second index and and creates a json payload
+  5. That payload is assigned when the token has been strips it of it's base64 encoded data
+  6. The payload is then parsed and returned
+  7. If the token doesn't exist then it returns nothing
+  8. The result of the ternery expression is assigned to the const user
+  9. User is then set as the state
+
+ IV. User can sign out
+  1. When the user clicks the signout link at the top a handleSignOut function is called
+  2. It removes the `react-context-jwt` token from localstorage
+  3. The user is also set to null

@@ -1,0 +1,57 @@
+
+
+
+ I. Sign up
+  1. The app asks the user for information via form
+  2. The user enters a username and password, form won't acccept any empty text inputs
+  3. Once the user clicks the `Register` button, the form uses a fetch request to the database to store
+     the username and password
+  4. Before they are stored, the server checks to see if the username and password exists
+  5. If they don't exist then throw a 400 error asking for both of those entries
+  6. If they do exist, then proceed.
+  7. Password is passed as an argument to argon2's hash method.
+  8. The password turns into argons new hashedpassword
+  9. the return is a database query with the query and the parameters
+ 10. Then the db queries the database and a user is returned from the db query and the client receives
+     a 201
+ 12. If at any point there is an error, the catch method grabs it and sends it to express to deal with
+
+II.Sign in
+  1. The client asks for a users username and password via a form element
+  2. The user enters their username and password, the form won't accept any empty inputs
+  3. When the user click's sign in the form is submitted and a request body is sent for review
+  4. The server recieves the username and password via the request body
+  5. It checks if the username and password exists.
+  6. It first checks the server for any username
+  7. If one does exists it fills up a destructured array with one index (in this case there can be many usernames of the same value
+     , this is generally not the case for most website)
+  7. If a user name doesn't exist it throws a 404 error invalid login
+  8. If the username does exist it destructures the user object and returns the
+    argon2 process.
+  9. First argon2 takes the hashed password and the password from reqBody and
+     decrypts the hashed password back to it's original form
+  10. It then returns a boolean from the verify method and if that boolean is false then
+      the client recieves a 401 error saying 'invalid login'
+  11. If the passwords match a payload is created with userId and username
+  12. A token is also created with a sight method of the jwt object (jSON web token)
+      the token contains the payload and the TOKEN_SECRET
+  13. A response is give to the client with the token and a property name user with the payload information
+
+III. User can stay signed in (even if they refresh the page)
+  1. When the client receieves the okay status from the server the response gives a user
+  2. And the handleSignIn function takes one argument which is the payload and the token and sets
+     a key with the value of token to the local localStorage
+  3. When the react elements mount the browser checks the local storage for the key of
+     'react-context-jst'
+  4. If the token exists then it runs the decode token function
+     it takes the second index and and creates a json payload
+  5. That payload is assigned when the token has been strips it of it's base64 encoded data
+  6. The payload is then parsed and returned
+  7. If the token doesn't exist then it returns nothing
+  8. The result of the ternery expression is assigned to the const user
+  9. User is then set as the state
+
+ IV. User can sign out
+  1. When the user clicks the signout link at the top a handleSignOut function is called
+  2. It removes the `react-context-jwt` token from localstorage
+  3. The user is also set to null

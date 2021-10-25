@@ -1,0 +1,50 @@
+.row {
+  display: flex;
+}
+
+.true-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  border: 1px solid #c63f3c;
+  padding: 5rem;
+}
+
+.picture-container {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.col-80 {
+  width: 80%;
+}
+
+.space-between {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.image-container {
+  height: 500px;
+}
+
+i {
+  font-size: 48px;
+  color: #c63f3c;
+}
+
+.padding {
+  padding: 2rem;
+}
+
+.margin-arrows {
+  margin: 0 3rem;
+}
